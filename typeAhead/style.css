@@ -1,0 +1,93 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: yellowgreen;
+}
+
+html{
+    font-size: 0.5vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+.mainPage{
+    margin: 2rem 10% 0;
+    text-align: center;
+}
+
+.mainPage>h3{
+    margin: 2rem 0;
+    font-size: 2rem;;
+}
+
+.mainPage>h1{
+    font-family: 'Playfair Display', serif;
+    margin: 1rem 0;
+    font-size: 6rem;
+}
+
+input{
+    width: 100%;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    outline: 0;
+    background-color: white;
+    border: 10px solid #f2f2f2;
+    width: 120%;
+    left: -10%;
+    position: relative;
+    top: 10px;
+    z-index: 2;
+    border-radius: 5px;
+    font-size: 40px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.12), insert 0 0 2px rgba(0,0,0,0.19);
+
+}
+
+.search{
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+.suggestions{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.suggestions li{
+    background: white;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 100;
+    list-style: none;
+    border-bottom: 1px solid #d8d8d8;
+    box-shadow: 0 0 10px rgba(0,0,0,0.14);
+    margin: 0;
+    padding: 20px;
+    transition: background 0.2s;
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+
+
+.suggestions li:nth-child(even){
+    transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+    background: linear-gradient(to top, #ffffff 0%,#efefef 100%);
+}
+
+
+.suggestions li:nth-child(odd){
+    transform: perspective(100px) rotateX(-3deg) translateY(3px);
+    background: linear-gradient(to top, #ffffff 0%,#efefef 100%);
+}
+
+span{
+    background: transparent;
+    
+}
+span.population{
+    
+}
