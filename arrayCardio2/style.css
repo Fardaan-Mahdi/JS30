@@ -1,0 +1,32 @@
+html{
+    font-size: 2vw;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #34bbca;
+    color: white;
+}
+
+.cardio{
+    margin: auto 10%;
+    text-align: center;
+
+}
+
+
+.cardio>h3{
+    font-family: 'Playfair Display', serif;
+    font-size: 0.7rem;
+    margin: 0.5rem auto;
+}
+
+.cardio>h1{
+    font-size: 2rem;
+    margin: 1rem auto;
+}
