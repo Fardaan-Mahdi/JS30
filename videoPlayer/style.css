@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 0.7vw;
+}
+body{
+    overflow: hidden;
+    background: #e3f3ed;
+}
+
+.mainPage{
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.mainPage>h3{
+    font-size: 1.5rem;;
+}
+
+.mainPage>h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+}
+
+.mainBody{
+    min-height: 100vh;
+    position: relative;
+    top: -10rem;
+}
+
+.mainBody, .video-controls, .video-timer, .options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container{
+    max-width: 900px;
+    width: 98%;
+    background: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    overflow:hidden;
+    position: relative;
+}
+
+.container.fullscreen{
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+}
+
+.wrapper{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1.5rem;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    transition: all 0.08s ease;
+}
+
+.container.show-controls .wrapper{
+    bottom: 0;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.13s ease;
+}
+
+.wrapper::before{
+    content: "";
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height:calc(100%+35px);
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent)
+}
+
+.container video{
+    width: 100%;
+}
+
+.video-timeline{
+    height: 0.7rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.video-timeline .progress-area{
+    height: 0.3rem;
+    position: relative;
+    background: rgba(255,255,255,0.6);
+}
+
+.progress-area span{
+    position: absolute;
+    left: 50%;
+    color: #fff;
+    top: -2.5rem;
+    font-size: 1.3rem;
+    transform: translateX(-50%);
+}
+.progress-area span, .progress-area .progress-bar::before{
+    display: none;
+}
+
+.video-timeline:hover .progress-area span, 
+.video-timeline:hover .progress-area .progress-bar::before{
+    display: block;
+}
+.progress-area .progress-bar{
+    width: 0;
+    height: 100%;
+    background: #2289ff;
+    position: relative;
+}
+
+.progress-area .progress-bar::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 1.3rem;
+    width: 1.3rem;
+    top: 50%;
+    background: inherit;
+    border-radius: 50%;
+    transform: translateY(-50%);
+
+}
+
+.video-controls .options{
+    width: 100%;
+}
+
+.video-controls .options:first-child{
+    justify-content: flex-start;
+}
+.video-controls .options:last-child{
+    justify-content: flex-end;
+}
+
+.video-controls{
+    padding: 0.5rem 2rem 1rem;
+}
+
+.options button{
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    color: #fff;
+    background: none;
+    font-size: 1.9rem;
+    cursor: pointer;
+}
+
+.options input{
+    height: 0.4rem;
+    max-width: 7.5rem;
+}
+
+.options button :where(i,span){
+    width: 100%;
+    height: 100%;
+    line-height: 4rem;
+}
+
+.options .video-timer{
+    font-size: 1.4rem;
+    color: #efefef;
+    margin-left: 1.5rem;
+}
+
+.video-timer .separator{
+    font-size: 1.6rem;
+    margin: 0 0.5rem;
+    font-family: "Open sans";
+}
+
+.playback-content{
+    position: relative
+}
+
+.playback-content .speed-options {
+    position: absolute;
+    bottom: 4rem;
+    left: -4rem;
+    opacity: 0;
+    background: #fff;
+    list-style: none;
+    width: 9.5rem;
+    border-radius: 0.4rem;
+    pointer-events: none;
+    transition: opacity 0.13s ease;
+}
+
+.playback-content .speed-options.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.speed-options li{
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+}
+
+.speed-options li.active{
+    background: #2289ff;
+    color: #fff;
+}
