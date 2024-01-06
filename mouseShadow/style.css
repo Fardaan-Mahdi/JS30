@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Serif', serif;
+}
+
+header{
+    text-align: center;
+    padding-top: 15px;
+    backdrop-filter: brightness(0.6);
+    color: white;
+
+}
+
+.main{
+    background: url(back.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.container{
+    height: 90vh;
+    text-align: center;
+    padding: 15%;
+    color: white;
+    backdrop-filter: brightness(0.6);
+}
+
+.hero{
+    font-size: 10vh;
+}
