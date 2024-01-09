@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webcamFun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="mainPage" style="text-align: center; margin-top: 10px;">
+        <h3>#Javascript30 - 8 of 30</h3>
+        <h1>🕸️ WEBCAM</h1>
+    </div>
+    <video class="player"></video>
+    <div class="photobooth">
+        <div class="combo">
+            <canvas class="photo"></canvas>
+            <div class="rgb">
+                <div class="rmin grid-items">
+                    <label for="rmin">Red Min: </label>
+                    <input type="range" min=0 max=255 name="rmin">
+                </div>
+                <div class="rmax grid-items">
+                    <label for="rmax">Red Max: </label>
+                    <input type="range" min=0 max=255 name="rmax">
+                </div>
+                <div class="gmin grid-items">
+                    <label for="gmin">Green Min: </label>
+                    <input type="range" min=0 max=255 name="gmin">
+                </div>
+                <div class="gmax grid-items">
+                    <label for="gmax">Green Max: </label>
+                    <input type="range" min=0 max=255 name="gmax">
+                </div>
+                <div class="bmin grid-items">
+                    <label for="bmin">Blue Min: </label>
+                    <input type="range" min=0 max=255 name="bmin">
+                </div>
+                <div class="bmax grid-items">
+                    <label for="bmax">Blue Max: </label>
+                    <input type="range" min=0 max=255 name="bmax">
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button onClick="takePhoto()" class="btn">Take Photo 📸</button>
+            <div class="strip"></div>
+        </div>
+
+
+    </div>
+
+    <audio class="snap" src="./snap.mp3" hidden></audio>
+    <script src="script.js"></script>
+</body>
+
+</html>
