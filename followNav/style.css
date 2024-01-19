@@ -54,3 +54,8 @@ a{
     display: block;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
   }
+
+  .row{
+    text-align: center;
+    margin: 30px;
+  }

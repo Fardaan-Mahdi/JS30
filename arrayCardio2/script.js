@@ -18,6 +18,7 @@ console.log({comments})
 
 
 // The some() method of Array instances tests whether at least one element in the array passes the test implemented by the provided function
+console.log("Using Array.prototype.some()")
 const isAdults= people.some(person =>{
     const year=(new Date()).getFullYear();
     if(year-person.year >=19){
@@ -28,6 +29,7 @@ console.log({isAdults});
 
 
 // The every() method of Array instances tests whether all elements in the array pass the test implemented by the provided function. 
+console.log("Using Array.prototype.every()")
 const allAdults = people.every(person => ((new Date()).getFullYear())-person.year >=19);
 console.log({allAdults});
 
@@ -35,6 +37,7 @@ console.log({allAdults});
 // The findIndex() method of Array instances returns the index of the first element in an array that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned.
 
 // Find the comment with this ID
+console.log("Using Array.prototype.findIndex()")
 const index=comments.findIndex(comment => comment.id==823423);
 console.log({index});
 

@@ -54,9 +54,9 @@ body {
     display: flex;
     flex-direction: column;
     transition:
-        font-size 0.1s cubic-bezier(0.61, -0.19, 0.7, -0.11),
-        flex 0.1s cubic-bezier(0.61, -0.19, 0.7, -0.11);
-        background: 0.2s;
+        font-size 0.01s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+        flex 0.01s cubic-bezier(0.61, -0.19, 0.7, -0.11);
+        background: 0.02s;
 }
 
 .panel>* {

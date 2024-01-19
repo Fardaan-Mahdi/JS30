@@ -38,6 +38,7 @@ body {
 .slide-in {
     opacity: 0;
     transition: all .3s;
+    
 }
 
 .align-left.slide-in {
