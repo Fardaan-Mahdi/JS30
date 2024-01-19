@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voiceinator</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="intro">
+            <h3>#Javascript30 - 23 of 30</h3>
+            <h1>Voiceinator</h1>
+            <div id="card">
+                <select name="voice" id="voices">
+                    <option value="">Select A Voice</option>
+                </select>
+
+                <div class="controls">
+                    <label for="rates" style="color: aliceblue;">
+                        <h3>Rate:</h3>
+                    </label>
+                    <input type="range" name="rates" id="rate" min="0" max="100" step="1">
+
+                    <label for="pitch" style="color: aliceblue;">
+                        <h3>Pitch:</h3>
+                    </label>
+                    <input name="pitch" id='pitch' type="range" min="0" max="100" step="1">
+                </div>
+                <textarea name="text">Hello! I love JavaScript 👍</textarea>
+
+                <div class="entry">
+                    <button id="stop">Stop!</button>
+                    <button id="speak">Speak</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

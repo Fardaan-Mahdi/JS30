@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-image: linear-gradient(135deg, #FDEB71 10%, #F8D800 100%);
+
+}
+.intro {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.main {
+    height: 100vh;
+    padding: 20px;
+}
+
+#card {
+    background-color: cornflowerblue;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: auto;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+
+#voices {
+    margin-top: 20px;
+    width: 90%;
+    height: 50px;
+    border-radius: 10px;
+}
+
+#rate {
+    width: 90%;
+    margin: 10px;
+}
+
+
+
+#pitch {
+    width: 90%;
+    margin: 10px;
+}
+
+.controls {
+    width: 90%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+input[type="range"] {
+    /* For WebKit-based browsers (Chrome, Safari) */
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: blue;
+    /* Background color of the track */
+    outline: none;
+    /* Remove default focus outline */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    /* For WebKit-based browsers (Chrome, Safari) */
+    -webkit-appearance: none;
+    width: 20px;
+    /* Set the width of the thumb */
+    height: 20px;
+    /* Set the height of the thumb */
+    background: yellow;
+    /* Set the color of the thumb */
+    border-radius: 50%;
+    /* Make it circular */
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    /* For Firefox */
+    width: 20px;
+    /* Set the width of the thumb */
+    height: 20px;
+    /* Set the height of the thumb */
+    background: #007bff;
+    /* Set the color of the thumb */
+    border-radius: 50%;
+    /* Make it circular */
+    cursor: pointer;
+}
+
+textarea {
+    height: 10rem;
+    width: 90%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.entry {
+    margin: 20px 0px;
+}
+
+button {
+    margin: 0 20px;
+    padding: 20px 75px;
+    border-radius: 10px;
+    border: 0;
+    background-color: blue;
+    color: white;
+    font-size: larger;
+}
