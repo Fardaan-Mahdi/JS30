@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Understanding JavaScript's Capture</title>
+  <link rel="icon" href="https://fav.farm/✅" />
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+
+    .bod{
+        text-align: center;
+    }
+  
+    *, *:before, *:after {
+        margin:0;
+        padding:0;
+      box-sizing: inherit;
+    }
+  
+    div {
+      width: 100%;
+      padding: 100px;
+    }
+  
+    .one {
+      background: thistle;
+    }
+  
+    .two {
+      background: mistyrose;
+    }
+  
+    .three {
+      background: coral;
+    }
+    h2{
+        position:relative;
+        bottom:50px;
+    }
+
+    h3{
+        margin-top:15px;
+    }
+    h1{
+        margin: 5px 0;
+    }
+    button{
+        padding: 5px 5px;
+        margin: 20px;
+    }
+  </style>
+</head>
+<body class="bod">
+    <h3>#Javascript30 - 25 of 30</h3>
+    <h1>Psst: have a look at the JavaScript Console 🙇</h1>
+  <div class="one">
+    <h2>ONE</h2>
+    <div class="two">
+        <h2>TWO</h2>
+      <div class="three">
+        <h2>THREE</h2>
+      </div>
+    </div>
+  </div>
+<button>Click Me!</button>
+<script>
+  const divs = document.querySelectorAll('div');
+  const button = document.querySelector('button');
+
+  function logText(e) {
+    console.log(this.classList.value);
+    e.stopPropagation(); // stop bubbling!
+    // console.log(this);
+  }
+
+  divs.forEach(div => div.addEventListener('click', logText, {
+    capture: false,
+    once: true
+  }));
+
+  button.addEventListener('click', () => {
+    console.log('Click!!!');
+  }, {
+    once: true
+  });
+
+</script>
+</body>
+</html>
